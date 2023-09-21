@@ -13,15 +13,15 @@ app.get('/', (req, res) => {
 app.get('/students', async (req, res) => {
   res.setHeader('Content-Type', 'text/plain');
   let dbInfo = 'This is the list of our students\n';
-    await countStudents(process.argv[2])
-      .then((msg) => {
-        dbInfo += msg;
-        res.end(dbInfo);
-      })
-      .catch((err) => {
-        dbInfo += err.message;
-        res.end(dbInfo);
-      });
+  await countStudents(process.argv[2])
+    .then((msg) => {
+      dbInfo += msg;
+      res.end(dbInfo);
+    })
+    .catch((err) => {
+      dbInfo += err.message;
+      res.end(dbInfo);
+    });
 });
 
 app.listen(port, () => {
@@ -29,4 +29,3 @@ app.listen(port, () => {
 });
 
 module.exports = app;
-
