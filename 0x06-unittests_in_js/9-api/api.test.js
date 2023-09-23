@@ -54,7 +54,7 @@ describe('Integration Testing', () => {
 
       request(options, function (error, response, body) {
         expect(response.statusCode).to.equal(200);
-        expect(body).to.equal('Payment methods for cart 1');
+        expect(body).to.equal('Payment methods for cart 13');
         done();
       });
     });
