@@ -17,14 +17,14 @@ describe('Hooks', () => {
   it('should call sendPaymentRequestToAPI to always log the total number 120', () => {
     sendPaymentRequestToApi(100, 20);
 
-    assert.equal(log.calledWithExactly("The total is: 120"));
+    assert.equal(log.calledWithExactly("The total is: 120"), true);
     assert.equal(log.calledOnce, true);
   });
 
   it('should call sendPaymentRequestToAPI to always return the total number 20', () => {
     sendPaymentRequestToApi(10, 10);
 
-    assert.equal(log.calledWithExactly("The total is: 20"));
+    assert.equal(log.calledWithExactly("The total is: 20"), true);
     assert.equal(log.calledOnce, true);
   });
 });
